@@ -1,0 +1,177 @@
+@font-face{
+    font-family: "Odin";
+    src: url("./fonts/Norse-Bold.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --font-odin: 'Odin', sans-serif;
+    --green: #596D48;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  min-height: 100vh;
+  align-items: stretch;
+  font-family: 'Inter', sans-serif;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+body>div{
+    flex: 1;
+}
+
+.form-and-content{
+    flex: 1.7;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-and-content > *{
+    flex: 1 1 0;
+}
+
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    gap: 8px;
+    box-shadow: 1px 1px 20px #888888;
+}
+
+.form-row{
+    display: flex;
+    gap: 1rem;
+}
+
+.image-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    background-image: url('./imgs/halie-west-25xggax4bSA-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.bottom-of-content{
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    bottom: 34.375rem;
+}
+
+.logo img{
+    height: 5rem;
+    width: auto;
+}
+
+.logo-name{
+    font-size: 5rem;
+    color: white;
+    font-family: var(--font-odin);
+}
+
+a{
+    color: var(--green);
+    text-decoration: none;
+}
+
+button{
+    background-color: var(--green);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    padding: .4rem;
+    width: 12rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 5px 1px 20px #888888;
+}
+
+input{
+    width: 100%;
+    padding: 0.5rem; /* same padding for all */
+    border: 1px solid #ccc; /* same border for all */
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+
+
+.label-input-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.call-to-action{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    max-width: 60ch;
+    font-weight: 700;
+}
+
+.credits{
+    color: white;
+    opacity: .9;
+    font-size: .8rem;
+    position: relative;
+    align-self: center;
+}
