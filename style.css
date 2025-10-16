@@ -96,12 +96,7 @@ form{
   position: relative;
 }
 
-.label-input-container:has(label[for="pword1"] + input:invalid)::after,
-.label-input-container:has(label[for="pword2"] + input:invalid)::after,
-.label-input-container:has(label[for="email"] + input:invalid)::after,
-.label-input-container:has(label[for="tel"] + input:invalid)::after,
-.label-input-container:has(label[for="first-name"] + input:invalid)::after,
-.label-input-container:has(label[for="last-name"] + input:invalid)::after{
+.label-input-container:has(input:not(:placeholder-shown):not(:focus):invalid)::after {
   position: absolute;
   top: 4.4rem;
   font-size: .8rem;
@@ -109,22 +104,19 @@ form{
   content: 'Required';
 }
 
-
-.label-input-container:has(label[for="pword1"] + input:invalid)::after {
+.label-input-container:has(label[for="pword1"] + input:not(:placeholder-shown):not(:focus):invalid)::after {
     content: '6 chars, 1 lowercase, 1+ uppercase, 1+ number, 1+ special char';
-    
 }
 
-.label-input-container:has(label[for="pword2"] + input:invalid)::after {
+.label-input-container:has(label[for="pword2"] + input:not(:placeholder-shown):not(:focus):invalid)::after {
     content: 'Invalid password';
-    
 }
 
-.label-input-container:has(label[for="email"] + input:invalid)::after {
+.label-input-container:has(label[for="email"] + input:not(:placeholder-shown):not(:focus):invalid)::after {
     content: 'Invalid email';
 }
 
-.label-input-container:has(label[for="tel"] + input:invalid)::after {
+.label-input-container:has(label[for="tel"] + input:not(:placeholder-shown):not(:focus):invalid)::after {
     content: '(123) 456-7891';
 }
 
