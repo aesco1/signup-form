@@ -27,49 +27,87 @@
             
         <div class="form-container">
             <h1>Let's do this</h1>
-            <div class="form-row">
-                <div class="label-input-container">
-                    <label for="first-name">FIRST NAME</label>
-                    <input type="text" name="first-name" id="first-name">
+            <form action="" method="post" id="form">
+                <div class="form-row">
+                    <div class="label-input-container">
+                        <label for="first-name">FIRST NAME</label>
+                        <input 
+                            type="text" 
+                            name="first-name" 
+                            id="first-name" 
+                            placeholder=""
+                            required
+                        >
+                    </div>
+                    
+                    
+                    <div class="label-input-container">
+                        <label for="last-name">LAST NAME</label>
+                        <input 
+                            type="text" 
+                            name="last-name" 
+                            id="last-name" 
+                            placeholder=""
+                            required
+                        >   
+                    </div>
+                
                 </div>
-                
-                
-                <div class="label-input-container">
-                    <label for="first-name">LAST NAME</label>
-                    <input type="text" name="last-name" id="last-name">
-                </div>
-                
-            </div>
-            <div class="form-row">
-                <div class="label-input-container">
-                    <label for="first-name">EMAIL</label>
-                    <input type="email" name="email" id="email">
-                </div>
-                
+                <div class="form-row">
+                    <div class="label-input-container">
+                        <label for="email">EMAIL</label>
+                        <input 
+                            type="email" 
+                            name="email" 
+                            id="email"
+                            placeholder="example@email.com"
+                            required
+                        >
+                    </div>
+                    
 
-                <div class="label-input-container">
-                    <label for="tel">PHONE NUMBER</label>
-                    <input type="tel" name="tel" id="tel">
+                    <div class="label-input-container">
+                        <label for="tel">PHONE NUMBER</label>
+                        <input 
+                            type="text" 
+                            name="tel" 
+                            id="tel"
+                            placeholder="Phone Number"
+                            pattern="^\(\d{3}\)\d{7,10}$"
+                            required
+                        >
+                    </div>
                 </div>
-                
-            </div>
-            <div class="form-row">
-                <div class="label-input-container">
-                    <label for="pword">PASSWORD</label>
-                    <input type="password">
+
+                <div class="form-row">
+                    <div class="label-input-container">
+                        <label for="pword1">PASSWORD</label>
+                        <input 
+                            type="password" 
+                            placeholder=""
+                            id="pword1"
+                            minlength="6"
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$"
+                            required
+                        >
+                    </div>
+                    
+                    <div class="label-input-container">
+                        <label for="pword2">CONFIRM PASSWORD</label>
+                        <input 
+                            type="password" 
+                            placeholder=""
+                            id="pword2"
+                            minlength="6"
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$"
+                            required
+                        >
+                    </div>
                 </div>
-                
-                <div class="label-input-container">
-                    <label for="pword">CONFIRM PASSWORD</label>
-                    <input type="password">
-                </div>
-                
-            </div>
-            
-            
+            </form>
         </div>
         <div class="bottom-of-content">
-            <button type="submit">Create Account</button>
+            <button type="submit" form="form" value="Submit">Create Account</button>
             <div class="existing-account">Already have an account? <a href="">Log in</a></div>
         </div>
     </div>

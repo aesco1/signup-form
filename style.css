@@ -77,13 +77,55 @@ body>div{
     display: flex;
     flex-direction: column;
     padding: 4rem 2rem;
-    gap: 8px;
+    gap: .5rem;
     box-shadow: 1px 1px 20px #888888;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .form-row{
     display: flex;
     gap: 1rem;
+}
+
+.label-input-container{
+  position: relative;
+}
+
+.label-input-container:has(label[for="pword1"] + input:invalid)::after,
+.label-input-container:has(label[for="pword2"] + input:invalid)::after,
+.label-input-container:has(label[for="email"] + input:invalid)::after,
+.label-input-container:has(label[for="tel"] + input:invalid)::after,
+.label-input-container:has(label[for="first-name"] + input:invalid)::after,
+.label-input-container:has(label[for="last-name"] + input:invalid)::after{
+  position: absolute;
+  top: 4.4rem;
+  font-size: .8rem;
+  color: rgb(230, 14, 14);
+  content: 'Required';
+}
+
+
+.label-input-container:has(label[for="pword1"] + input:invalid)::after {
+    content: '6 chars, 1 lowercase, 1+ uppercase, 1+ number, 1+ special char';
+    
+}
+
+.label-input-container:has(label[for="pword2"] + input:invalid)::after {
+    content: 'Invalid password';
+    
+}
+
+.label-input-container:has(label[for="email"] + input:invalid)::after {
+    content: 'Invalid email';
+}
+
+.label-input-container:has(label[for="tel"] + input:invalid)::after {
+    content: '(123) 456-7891';
 }
 
 .image-side{
@@ -150,6 +192,23 @@ input{
     font-family: inherit;
 }
 
+input:placeholder-shown {
+       background-color: #f9f9f9;
+       color: #999;
+}
+
+input:not(:placeholder-shown):not(:focus):invalid {
+    border-color: #f50f08;
+    box-shadow: 0 0 5px rgba(216, 17, 3, 0.5);
+    outline: none;
+}
+
+input:focus{
+  border-color: #4a90e2;
+  background-color:rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+  outline: none;
+}
 
 
 .label-input-container{
